@@ -1,0 +1,779 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/20/2024 9:49:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{2D66B218-656E-43D2-B3EF-32B16328FB7D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1D3EE699-407F-4387-B7FA-DB548AF4204E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{22F15447-BB28-4030-AFF8-1E49D40BEE1E}"
+      DTS:ObjectName="ContratosDWH.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package1-{22F15447-BB28-4030-AFF8-1E49D40BEE1E}localhost.ContratosDWH.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAStI86GtsNYW4jTRHGvLsFdmzXK52REZZIvkdQ0FgiwAAAAAOgAAAAAIAACAAAADz1oirAdlQVHyCAFb2IBuF6DDq9HhERDXD+jgXgsPQMSAAAAB3HvIHKJGRg0BfnEWqEFbWSq7CnvMFNt/+4kh9Aso8REAAAAD3gj1xHPFIi8a0SvsSVSy1sjFRdTNKHLJR/yrOeXmBuLP5M8A/2Ht2PIxae93K2gor6GOn3o89YDT01CFHaGKg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.OLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{05033E39-AEB0-47C1-AAD5-D6E4CA9319E9}"
+      DTS:ObjectName="ContratosDWH.OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package1-{05033E39-AEB0-47C1-AAD5-D6E4CA9319E9}localhost.ContratosDWH.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABipXO+TFcKbsBR3hF2MgFuk0FsI3oDGrb3aLUFlfPgsQAAAAAOgAAAAAIAACAAAACNhT+i/mUOcoFfiwpBFzPbiL4pC8BsvdWejHoAPt+9NyAAAABIRzTezogDXcgwyFNdokL9MloEJFT2pv1XyNJsuvobMkAAAADfhdb0+Qrbns9oIMPObopkm8YUejHellQMF9gMuNphRLEJj2bLiMI7q/zUBQMLkf3vZOUT+i/fAWNs3kuScKbb</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosSource.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{9B631D40-7086-4E14-B234-6D70FC28B83D}"
+      DTS:ObjectName="ContratosSource.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosSource;Persist Security Info=True;Application Name=SSIS-Package-{9B631D40-7086-4E14-B234-6D70FC28B83D}localhost.ContratosSource.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuk9ZxM0LOCXdwdnKJNTSoge/6h08Ek4ZBRzCty9VbBgAAAAAOgAAAAAIAACAAAAB7Eg9H6aZSsn9Jyw4YPtSmJ4zcDVk7tlrQVSlZ1IAepiAAAADXc0d6Pn5RZnPBf32uCFWAoBGYSwoVgQSaDeHGQ+d/PUAAAABY67wOf13GNSs9B9nfGkZn115seMEGo2Qrs2chX/MmhuFIY8zNEHBewnkG1021wROmPsmXhSJvmwK2wHwQt3xf</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosSource.OLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{54D315F6-E76C-4EB2-BD30-DE3CDD71FEE2}"
+      DTS:ObjectName="ContratosSource.OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosSource;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package1-{54D315F6-E76C-4EB2-BD30-DE3CDD71FEE2}localhost.ContratosSource.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9E7YX5OCTI4Mt4YeBxGAc1nlwHuHFSctbgLahzwLYYgAAAAAOgAAAAAIAACAAAADM0lwnyArXrtdV68e+bxsJvh9CJl181LmOql6dJRlgqCAAAACsCbyAOLWaANRm3h5ZMNY8QIBQziydLHnZ9iJI3oTtdUAAAAA6K6P4GFA1LUIhU9A0Zk6F6D29s9bMrb0klhJ9+7+mfoOc4UBSp3GfJSGQdnZQsQnpX4M0rhNhKjk/kAPl4evN</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\MUNICIPIO CESECOP-S1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{D92B5594-BE2D-42F9-9C1E-553E2309AEF4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="MUNICIPIO CESECOP-S1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\MUNICIPIO CESECOP-S1\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Departamento]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Departamento]) [refTable]
+where [refTable].[nombre] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_departamento" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nombre" dataType="DT_WSTR" length="40" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.OLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.OLEDB]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda].Columns[DeptoCopy]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="DeptoCopy"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">nombre</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_departamento]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_departamento]"
+                      name="id_departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_departamento</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S1 BOGOTA"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TOP(10) departamento, ciudad
+FROM [CESECOP-S1]
+where departamento like '%Bog%' or departamento like '%dinamarca'
+EXCEPT
+SELECT T2.nombre as departamento, T1.nombre as municipio
+FROM [ContratosDWH].[dbo].[Municipio] as T1
+JOIN [ContratosDWH].[dbo].[Departamento] as T2
+ON T1.id_departamento = T2.id_departamento</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[departamento]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].ExternalColumns[departamento]"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[departamento]"
+                      name="departamento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[ciudad]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].ExternalColumns[ciudad]"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[ciudad]"
+                      name="ciudad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].ExternalColumns[departamento]"
+                      dataType="nText"
+                      name="departamento" />
+                    <externalMetadataColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].ExternalColumns[ciudad]"
+                      dataType="nText"
+                      name="ciudad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[departamento]"
+                      dataType="nText"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[departamento]"
+                      name="departamento" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ciudad]"
+                      dataType="nText"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ciudad]"
+                      name="ciudad" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MUNICIPIO CESECOP-S1\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada].Columns[DeptoCopy]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="DeptoCopy"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(#{Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]} == "Distrito Capital de Bogotá") ? "Cundinamarca" : #{Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DeptoCopy == "Distrito Capital de Bogotá") ? "Cundinamarca" : DeptoCopy</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada].Columns[CiuCopy]"
+                      cachedDataType="wstr"
+                      cachedLength="27"
+                      cachedName="CiuCopy"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CiuCopy]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(#{Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]} == "Distrito Capital de Bogotá") ? "Bogotá" : #{Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CiuCopy]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DeptoCopy == "Distrito Capital de Bogotá") ? "Bogotá" : CiuCopy</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[departamento]"
+                      cachedDataType="nText"
+                      cachedName="departamento"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[departamento]" />
+                    <inputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ciudad]"
+                      cachedDataType="nText"
+                      cachedName="ciudad"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[ciudad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="40"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DeptoCopy]"
+                      name="DeptoCopy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[departamento]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CiuCopy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="27"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CiuCopy]"
+                      name="CiuCopy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET].Columns[ciudad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\MUNICIPIO CESECOP-S1.Paths[Salida de columna derivada]"
+              endId="Package\MUNICIPIO CESECOP-S1\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de columna derivada"
+              startId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\MUNICIPIO CESECOP-S1.Paths[Salida de conversión de datos]"
+              endId="Package\MUNICIPIO CESECOP-S1\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\MUNICIPIO CESECOP-S1.Paths[Salida de origen de ADO NET]"
+              endId="Package\MUNICIPIO CESECOP-S1\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de ADO NET"
+              startId="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\MUNICIPIO CESECOP-S1"
+          TopLeft="92.5,43.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\MUNICIPIO CESECOP-S1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,42"
+          Id="Package\MUNICIPIO CESECOP-S1\Columna derivada"
+          TopLeft="194,200" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA"
+          TopLeft="108,39" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\MUNICIPIO CESECOP-S1\Conversión de datos"
+          TopLeft="158,114" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\MUNICIPIO CESECOP-S1\Búsqueda"
+          TopLeft="254,298" />
+        <EdgeLayout
+          Id="Package\MUNICIPIO CESECOP-S1.Paths[Salida de origen de ADO NET]"
+          TopLeft="208,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,33"
+              Start="0,0"
+              End="40,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="4,16.5" />
+                  <mssgle:LineSegment
+                    End="36,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,16.5"
+                    Point2="40,16.5"
+                    Point3="40,20.5" />
+                  <mssgle:LineSegment
+                    End="40,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\MUNICIPIO CESECOP-S1.Paths[Salida de conversión de datos]"
+          TopLeft="248,156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30,44"
+              Start="0,0"
+              End="30,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="26,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26,22"
+                    Point2="30,22"
+                    Point3="30,26" />
+                  <mssgle:LineSegment
+                    End="30,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\MUNICIPIO CESECOP-S1.Paths[Salida de columna derivada]"
+          TopLeft="278,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.5,56"
+              Start="0,0"
+              End="40.5,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="36.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.5,28"
+                    Point2="40.5,28"
+                    Point3="40.5,32" />
+                  <mssgle:LineSegment
+                    End="40.5,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MUNICIPIO CESECOP-S1\CESECOP-S1 BOGOTA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\MUNICIPIO CESECOP-S1\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Departamento]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
