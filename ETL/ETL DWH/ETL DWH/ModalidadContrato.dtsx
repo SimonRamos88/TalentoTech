@@ -1,0 +1,1090 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/24/2024 11:11:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{F29A11E4-323D-426F-BB77-52E219DC351D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{3C32C3CD-5746-4721-974E-0C3269EB4855}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{22F15447-BB28-4030-AFF8-1E49D40BEE1E}"
+      DTS:ObjectName="ContratosDWH.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package1-{22F15447-BB28-4030-AFF8-1E49D40BEE1E}localhost.ContratosDWH.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATnAQvTbfVlnHC5jvEg2bQNHFdgm1uWAvypODeyHxN5AAAAAAOgAAAAAIAACAAAAB8JmnuU47nSOFj5zIx+K3YCEvAiKrUD8llzX83DR0/cSAAAAD4xy/PqABoA0YvqwfnwPkvUaN5ALEpE8WhJxp00bk370AAAADfyVBIybjRLDoek4Tm28O75R+PdghOJB6c6I7N6DA5QkKqAnsM2BjysxS8h5kVNShJhYp5e7UFjOJ7TDSLQB/n</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosSource.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{9B631D40-7086-4E14-B234-6D70FC28B83D}"
+      DTS:ObjectName="ContratosSource.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosSource;Persist Security Info=True;Application Name=SSIS-Package-{9B631D40-7086-4E14-B234-6D70FC28B83D}localhost.ContratosSource.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABrS68M8qeC6Kc3bo5NYgMi66Cdo+ubZpsIDnn3jxiX3wAAAAAOgAAAAAIAACAAAACEaUY8EfBIv8FwykDbecfnn5s5J3Hva56qC9ZcVk/e4iAAAAB9HfqGj0Fyq1liiEFmOgVZ7QyZU0g3yc0uwZUT/Xks8UAAAABIYH9POxta2qN+jHAlRUwFdNJaRp66A29ubpqUnYyIQZBk5U9Ug7fIoEG/X5oAvrGNMT7d/b1jmGSoishaGbZy</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CESECOP-S1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{63ABB403-85F6-4211-8806-C3D46B6F8A6E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CESECOP-S1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CESECOP-S1\CESECOP-S1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Modalidad_Contratacion, CE.Just_Modalidad_Contratacion
+FROM [CESECOP-S1] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Modalidad_Contrato] AS DW ON CE.Modalidad_Contratacion = DW.modalidad_contratacion and DW.just_modalidad_contratacion =  CE.Just_Modalidad_Contratacion
+WHERE  DW.modalidad_contratacion is null</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S1\CESECOP-S1.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Modalidad_Contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Just_Modalidad_Contratacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CESECOP-S1\MODALIDAD DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="MODALIDAD DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Modalidad_Contrato"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S1\MODALIDAD DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]" />
+                    <inputColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Just_Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      dataType="i4"
+                      name="id_modalidad_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      name="modalidad_contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      name="just_modalidad_contratacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S1\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S1\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S1\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S1\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CESECOP-S1.Paths[Salida de origen de ADO NET]"
+              endId="Package\CESECOP-S1\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\CESECOP-S2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{4f6719e2-aede-4a65-85be-6c1afdb624eb}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CESECOP-S2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CESECOP-S2\CESECOP-S2"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Modalidad_Contratacion, CE.Just_Modalidad_Contratacion
+FROM [CESECOP-S2] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Modalidad_Contrato] AS DW ON CE.Modalidad_Contratacion = DW.modalidad_contratacion and DW.just_modalidad_contratacion =  CE.Just_Modalidad_Contratacion
+WHERE  DW.modalidad_contratacion is null</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S2\CESECOP-S2.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Modalidad_Contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Just_Modalidad_Contratacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CESECOP-S2\MODALIDAD DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="MODALIDAD DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Modalidad_Contrato"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S2\MODALIDAD DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]" />
+                    <inputColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Just_Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      dataType="i4"
+                      name="id_modalidad_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      name="modalidad_contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      name="just_modalidad_contratacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S2\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S2\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S2\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S2\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CESECOP-S2.Paths[Salida de origen de ADO NET]"
+              endId="Package\CESECOP-S2\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\CESECOP-S3"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{fc0e7765-f27f-4c97-b267-ed7548fa25ec}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CESECOP-S3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CESECOP-S3\CESECOP-S3"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S3"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Modalidad_Contratacion, CE.Just_Modalidad_Contratacion
+FROM [CESECOP-S3] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Modalidad_Contrato] AS DW ON CE.Modalidad_Contratacion = DW.modalidad_contratacion and DW.just_modalidad_contratacion =  CE.Just_Modalidad_Contratacion
+WHERE  DW.modalidad_contratacion is null</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S3\CESECOP-S3.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Modalidad_Contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      name="Just_Modalidad_Contratacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Modalidad_Contratacion]"
+                      name="Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      dataType="nText"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      name="Just_Modalidad_Contratacion" />
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CESECOP-S3\MODALIDAD DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="MODALIDAD DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Modalidad_Contrato"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CESECOP-S3\MODALIDAD DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Modalidad_Contratacion]" />
+                    <inputColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].Columns[Just_Modalidad_Contratacion]"
+                      cachedDataType="nText"
+                      cachedName="Just_Modalidad_Contratacion"
+                      externalMetadataColumnId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      lineageId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Just_Modalidad_Contratacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      dataType="i4"
+                      name="id_modalidad_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      name="modalidad_contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      name="just_modalidad_contratacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CESECOP-S3\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S3\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CESECOP-S3\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CESECOP-S3\MODALIDAD DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CESECOP-S3.Paths[Salida de origen de ADO NET]"
+              endId="Package\CESECOP-S3\MODALIDAD DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{68639576-B217-4410-80A1-D8F32518AC8F}"
+      DTS:From="Package\CESECOP-S1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\CESECOP-S2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{35668F64-3241-4DA6-89E3-624942D5ED04}"
+      DTS:From="Package\CESECOP-S2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\CESECOP-S3" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S1"
+          TopLeft="126.5,36.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S2"
+          TopLeft="183,148" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="201.5,78.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56.5,69.5"
+              Start="0,0"
+              End="56.5,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.75"
+                    Point2="0,34.75"
+                    Point3="4,34.75" />
+                  <mssgle:LineSegment
+                    End="52.5,34.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52.5,34.75"
+                    Point2="56.5,34.75"
+                    Point3="56.5,38.75" />
+                  <mssgle:LineSegment
+                    End="56.5,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S3"
+          TopLeft="218.5,229" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="258,190">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.5,39"
+              Start="0,0"
+              End="35.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
+                  <mssgle:LineSegment
+                    End="31.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.5,19.5"
+                    Point2="35.5,19.5"
+                    Point3="35.5,23.5" />
+                  <mssgle:LineSegment
+                    End="35.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CESECOP-S1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S1\CESECOP-S1"
+          TopLeft="266,72" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\CESECOP-S1\MODALIDAD DWH"
+          TopLeft="475,195" />
+        <EdgeLayout
+          Id="Package\CESECOP-S1.Paths[Salida de origen de ADO NET]"
+          TopLeft="341,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221,81"
+              Start="0,0"
+              End="221,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="4,40.5" />
+                  <mssgle:LineSegment
+                    End="217,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217,40.5"
+                    Point2="221,40.5"
+                    Point3="221,44.5" />
+                  <mssgle:LineSegment
+                    End="221,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CESECOP-S1\CESECOP-S1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CESECOP-S1\MODALIDAD DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\CESECOP-S2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\CESECOP-S2\MODALIDAD DWH"
+          TopLeft="475,195" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S2\CESECOP-S2"
+          TopLeft="266,72" />
+        <EdgeLayout
+          Id="Package\CESECOP-S2.Paths[Salida de origen de ADO NET]"
+          TopLeft="341,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221,81"
+              Start="0,0"
+              End="221,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="4,40.5" />
+                  <mssgle:LineSegment
+                    End="217,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217,40.5"
+                    Point2="221,40.5"
+                    Point3="221,44.5" />
+                  <mssgle:LineSegment
+                    End="221,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CESECOP-S2\CESECOP-S2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\CESECOP-S3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\CESECOP-S3\MODALIDAD DWH"
+          TopLeft="475,195" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\CESECOP-S3\CESECOP-S3"
+          TopLeft="266,72" />
+        <EdgeLayout
+          Id="Package\CESECOP-S3.Paths[Salida de origen de ADO NET]"
+          TopLeft="341,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221,81"
+              Start="0,0"
+              End="221,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="4,40.5" />
+                  <mssgle:LineSegment
+                    End="217,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217,40.5"
+                    Point2="221,40.5"
+                    Point3="221,44.5" />
+                  <mssgle:LineSegment
+                    End="221,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CESECOP-S3\CESECOP-S3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

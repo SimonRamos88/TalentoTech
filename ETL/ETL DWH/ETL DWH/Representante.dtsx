@@ -1,0 +1,1901 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/21/2024 11:52:38 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{AE86216F-2CA8-41BD-A6A1-9E798A1C215A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{03C854AA-2042-4268-8616-8BAEE4A68ECC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{22F15447-BB28-4030-AFF8-1E49D40BEE1E}"
+      DTS:ObjectName="ContratosDWH.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package1-{22F15447-BB28-4030-AFF8-1E49D40BEE1E}localhost.ContratosDWH.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEYs3bGR1CPPZ1zMPBa+Z8Gevo9sw2N+MnTbfPV0chpAAAAAAOgAAAAAIAACAAAACLNBVOpcqD8qaaU6WditgE9U7tHqAlY7L6icliSfRwHCAAAAATYot8LTcwWy579B3gfEiJmGVcJOrjKHZYJfefZbo6UEAAAACKyKO+lNlF8fabIyCdJaTbNneOy5BY7BfpKOPAvWCuO+QQBK4dNk5ivw0zMCTQbu1PDLMHAo+rv7lshjvLPfig</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosSource.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{9B631D40-7086-4E14-B234-6D70FC28B83D}"
+      DTS:ObjectName="ContratosSource.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosSource;Persist Security Info=True;Application Name=SSIS-Package-{9B631D40-7086-4E14-B234-6D70FC28B83D}localhost.ContratosSource.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABnE8f5DZQ1jg8YupBf/6sheSQEkTN4Cu4gST9kSz1BVAAAAAAOgAAAAAIAACAAAADhjVPEtUYIXW8yQCMPgQZWVZh2RjaiC51I+3dbPoJ6jiAAAADroy0lwyAWHOkpJbBtC3Rhj7+cwwMfvbSklGA9rWvYjUAAAAATOlb39R8mdz4uDyo8QzNDl66amnInouI3XnqUvd0QGvNNV8hbLm9M4x+JGkvUrOMqiM4kLWrBjuyoZw4t/7Um</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\REPRESENTANTE CESECOP-S1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{CCB7A8C3-2830-4193-9F21-3645F3D4E609}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="REPRESENTANTE CESECOP-S1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="CAST NOMBRE REP"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Inputs[Entrada de conversión de datos].Columns[nupp]"
+                      cachedDataType="nText"
+                      cachedName="nupp"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[nupp]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      name="nupp_C"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[nupp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Tipo_ID_Rep_Legal, upper(CE.Nombre_Rep_Legal) as nupp, ce.Nacionalidad_Rep_Legal
+FROM [CESECOP-S1] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Representante] AS DW ON ce.Tipo_ID_Rep_Legal = dw.tipo_doc_rep and ce.Nacionalidad_Rep_Legal = dw.nacionalidad_rep_legal and upper(ce.Nombre_Rep_Legal) = dw.nombre_rep_legal
+WHERE  DW.id_rep_legal IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      name="nupp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      name="Tipo_ID_Rep_Legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      dataType="nText"
+                      name="nupp" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      name="Nacionalidad_Rep_Legal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      name="nupp" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="REPRESENTANTE DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Representante"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Nacionalidad_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Tipo_ID_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_rep_legal]"
+                      dataType="i4"
+                      name="id_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      dataType="wstr"
+                      length="31"
+                      name="tipo_doc_rep" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      dataType="wstr"
+                      length="80"
+                      name="nombre_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      dataType="wstr"
+                      length="11"
+                      name="nacionalidad_rep_legal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="UPPER NOMBRE REP"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Inputs[Entrada de columna derivada].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[UPPER](#{Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(nupp_C)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de columna derivada]"
+              endId="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de columna derivada"
+              startId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de conversión de datos]"
+              endId="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de origen de ADO NET]"
+              endId="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de ADO NET"
+              startId="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\REPRESENTANTE CESECOP-S2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{8899fe5c-bafe-4b0b-b6a1-6ed700a8339c}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="REPRESENTANTE CESECOP-S2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="CAST NOMBRE REP"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Inputs[Entrada de conversión de datos].Columns[nupp]"
+                      cachedDataType="nText"
+                      cachedName="nupp"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[nupp]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      name="nupp_C"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[nupp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Tipo_ID_Rep_Legal, upper(CE.Nombre_Rep_Legal) as nupp, ce.Nacionalidad_Rep_Legal
+FROM [CESECOP-S2] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Representante] AS DW ON ce.Tipo_ID_Rep_Legal = dw.tipo_doc_rep and ce.Nacionalidad_Rep_Legal = dw.nacionalidad_rep_legal and upper(ce.Nombre_Rep_Legal) = dw.nombre_rep_legal
+WHERE  DW.id_rep_legal IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      name="nupp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      name="Tipo_ID_Rep_Legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      dataType="nText"
+                      name="nupp" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      name="Nacionalidad_Rep_Legal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      name="nupp" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="REPRESENTANTE DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Representante"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Nacionalidad_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Tipo_ID_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_rep_legal]"
+                      dataType="i4"
+                      name="id_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      dataType="wstr"
+                      length="31"
+                      name="tipo_doc_rep" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      dataType="wstr"
+                      length="80"
+                      name="nombre_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      dataType="wstr"
+                      length="11"
+                      name="nacionalidad_rep_legal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="UPPER NOMBRE REP"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Inputs[Entrada de columna derivada].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[UPPER](#{Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos].Columns[nupp_C]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(nupp_C)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de columna derivada]"
+              endId="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de columna derivada"
+              startId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de conversión de datos]"
+              endId="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de origen de ADO NET]"
+              endId="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de ADO NET"
+              startId="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\REPRESENTANTE CESECOP-S3"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{2c66a2a6-d451-4486-82ae-d2f5fac600b8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="REPRESENTANTE CESECOP-S3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CESECOP-S3"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT CE.Tipo_ID_Rep_Legal, upper(CE.Nombre_Rep_Legal) as nupp, ce.Nacionalidad_Rep_Legal
+FROM [CESECOP-S3] AS CE
+LEFT JOIN [ContratosDWH].[dbo].[Representante] AS DW ON ce.Tipo_ID_Rep_Legal = dw.tipo_doc_rep and ce.Nacionalidad_Rep_Legal = dw.nacionalidad_rep_legal and upper(ce.Nombre_Rep_Legal) = dw.nombre_rep_legal
+WHERE  DW.id_rep_legal IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosSource.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosSource.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[nupp]"
+                      name="nupp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      name="Tipo_ID_Rep_Legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[nupp]"
+                      dataType="nText"
+                      name="nupp" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].ExternalColumns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      name="Nacionalidad_Rep_Legal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      name="Tipo_ID_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[nupp]"
+                      name="nupp" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      dataType="nText"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      name="Nacionalidad_Rep_Legal" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Inputs[Entrada de columna derivada].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[UPPER](#{Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[nupp_C]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(nupp_C)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Inputs[Entrada de conversión de datos].Columns[nupp]"
+                      cachedDataType="nText"
+                      cachedName="nupp"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[nupp]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[nupp_C]"
+                      name="nupp_C"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[nupp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="REPRESENTANTE DWH"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Representante"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Nacionalidad_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Nacionalidad_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Nacionalidad_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[Tipo_ID_Rep_Legal]"
+                      cachedDataType="nText"
+                      cachedName="Tipo_ID_Rep_Legal"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET].Columns[Tipo_ID_Rep_Legal]" />
+                    <inputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].Columns[nupp_C]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="nupp_C"
+                      externalMetadataColumnId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[nupp_C]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_rep_legal]"
+                      dataType="i4"
+                      name="id_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_doc_rep]"
+                      dataType="wstr"
+                      length="31"
+                      name="tipo_doc_rep" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_rep_legal]"
+                      dataType="wstr"
+                      length="80"
+                      name="nombre_rep_legal" />
+                    <externalMetadataColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET].ExternalColumns[nacionalidad_rep_legal]"
+                      dataType="wstr"
+                      length="11"
+                      name="nacionalidad_rep_legal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de columna derivada]"
+              endId="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de columna derivada"
+              startId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de conversión de datos]"
+              endId="Package\REPRESENTANTE CESECOP-S3\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de origen de ADO NET]"
+              endId="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de ADO NET"
+              startId="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{9999B500-2BE1-4BA6-B808-4227BA8C1882}"
+      DTS:From="Package\REPRESENTANTE CESECOP-S1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\REPRESENTANTE CESECOP-S2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{AFA15682-FD70-4AB6-884B-21FD88E15450}"
+      DTS:From="Package\REPRESENTANTE CESECOP-S2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\REPRESENTANTE CESECOP-S3" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="249,42"
+          Id="Package\REPRESENTANTE CESECOP-S1"
+          TopLeft="175.5,167.5" />
+        <NodeLayout
+          Size="249,42"
+          Id="Package\REPRESENTANTE CESECOP-S2"
+          TopLeft="200,244" />
+        <NodeLayout
+          Size="249,42"
+          Id="Package\REPRESENTANTE CESECOP-S3"
+          TopLeft="218,348" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="300,209.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.5,34.5"
+              Start="0,0"
+              End="24.5,27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.25"
+                    Point2="0,17.25"
+                    Point3="4,17.25" />
+                  <mssgle:LineSegment
+                    End="20.5,17.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.5,17.25"
+                    Point2="24.5,17.25"
+                    Point3="24.5,21.25" />
+                  <mssgle:LineSegment
+                    End="24.5,27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="324.5,286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18,62"
+              Start="0,0"
+              End="18,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="14,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14,31"
+                    Point2="18,31"
+                    Point3="18,35" />
+                  <mssgle:LineSegment
+                    End="18,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\REPRESENTANTE CESECOP-S1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH"
+          TopLeft="493,315" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1"
+          TopLeft="218,71" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\REPRESENTANTE CESECOP-S1\UPPER NOMBRE REP"
+          TopLeft="427,216" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\REPRESENTANTE CESECOP-S1\CAST NOMBRE REP"
+          TopLeft="313,152" />
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de origen de ADO NET]"
+          TopLeft="293,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.5,39"
+              Start="0,0"
+              End="112.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
+                  <mssgle:LineSegment
+                    End="108.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.5,19.5"
+                    Point2="112.5,19.5"
+                    Point3="112.5,23.5" />
+                  <mssgle:LineSegment
+                    End="112.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de conversión de datos]"
+          TopLeft="498,173">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,43"
+              Start="0,0"
+              End="26,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,0"
+                    Point2="26,0"
+                    Point3="26,4" />
+                  <mssgle:LineSegment
+                    End="26,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S1.Paths[Salida de columna derivada]"
+          TopLeft="524,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.5,57"
+              Start="0,0"
+              End="71.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="67.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5,28.5"
+                    Point2="71.5,28.5"
+                    Point3="71.5,32.5" />
+                  <mssgle:LineSegment
+                    End="71.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S1\REPRESENTANTE DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S1\CESECOP-S1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\REPRESENTANTE CESECOP-S2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH"
+          TopLeft="493,328" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2"
+          TopLeft="218,71" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\REPRESENTANTE CESECOP-S2\UPPER NOMBRE REP"
+          TopLeft="411,229" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\REPRESENTANTE CESECOP-S2\CAST NOMBRE REP"
+          TopLeft="272,157" />
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de origen de ADO NET]"
+          TopLeft="293,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.5,44"
+              Start="0,0"
+              End="71.5,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="67.5,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5,22"
+                    Point2="71.5,22"
+                    Point3="71.5,26" />
+                  <mssgle:LineSegment
+                    End="71.5,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de conversión de datos]"
+          TopLeft="364.5,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.5,30"
+              Start="0,0"
+              End="143.5,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="4,15" />
+                  <mssgle:LineSegment
+                    End="139.5,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.5,15"
+                    Point2="143.5,15"
+                    Point3="143.5,19" />
+                  <mssgle:LineSegment
+                    End="143.5,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S2.Paths[Salida de columna derivada]"
+          TopLeft="508,271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.5,57"
+              Start="0,0"
+              End="87.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="83.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.5,28.5"
+                    Point2="87.5,28.5"
+                    Point3="87.5,32.5" />
+                  <mssgle:LineSegment
+                    End="87.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S2\REPRESENTANTE DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S2\CESECOP-S2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\REPRESENTANTE CESECOP-S3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="189,42"
+          Id="Package\REPRESENTANTE CESECOP-S3\Conversión de datos 1"
+          TopLeft="253,147" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\REPRESENTANTE CESECOP-S3\Columna derivada"
+          TopLeft="376,224" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH"
+          TopLeft="468,312" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3"
+          TopLeft="219,71" />
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de origen de ADO NET]"
+          TopLeft="294,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53.5,34"
+              Start="0,0"
+              End="53.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="49.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,17"
+                    Point2="53.5,17"
+                    Point3="53.5,21" />
+                  <mssgle:LineSegment
+                    End="53.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de conversión de datos]"
+          TopLeft="347.5,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.5,35"
+              Start="0,0"
+              End="112.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="108.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.5,17.5"
+                    Point2="112.5,17.5"
+                    Point3="112.5,21.5" />
+                  <mssgle:LineSegment
+                    End="112.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\REPRESENTANTE CESECOP-S3.Paths[Salida de columna derivada]"
+          TopLeft="460,266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110.5,46"
+              Start="0,0"
+              End="110.5,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="106.5,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.5,23"
+                    Point2="110.5,23"
+                    Point3="110.5,27" />
+                  <mssgle:LineSegment
+                    End="110.5,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S3\REPRESENTANTE DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\REPRESENTANTE CESECOP-S3\CESECOP-S3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
