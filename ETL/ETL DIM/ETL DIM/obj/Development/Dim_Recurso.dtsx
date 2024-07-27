@@ -1,0 +1,854 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/26/2024 10:17:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{72929FCE-52CB-465D-A633-F685D05B7F0B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{3E6971D3-AD5B-4239-899E-7EA2F3949541}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}"
+      DTS:ObjectName="ContratosDIm.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDIm;Persist Security Info=True;Application Name=SSIS-Package-{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}localhost.ContratosDIm.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADuXCx6NW5FZVB1Th4U4d1L8ivKVY5voIndnYof5UhDzwAAAAAOgAAAAAIAACAAAAATMnuNWab6aWL1yF2Ht7Z/4c8CKgvgbyQ30+6fkx6VrSAAAAD9nanLQMEFPbm7C9g1a6VIwpl8ioEdDKcBKApySUgoT0AAAAAZ/HQsNbdH0G6KGGoMlGpQarbEG49XaPGXf1f+XLGnZMeVkNvFU5IVkbYekQB+eOlxmcF5dd8nRcGqiLOERv3b</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{48EF0FA8-A830-4210-B8B6-40A3691BBB39}"
+      DTS:ObjectName="ContratosDWH.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package-{48EF0FA8-A830-4210-B8B6-40A3691BBB39}localhost.ContratosDWH.sa 1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABM3ocwsRcymeBChG+3adujMjsuacqOZHsIPogUAA6R/gAAAAAOgAAAAAIAACAAAABpmI7I0ZQvKzhqBn3/npFfTJJWfrxBlp43KAxfLjRN9SAAAABFjKoOVxgj1p64LuLawGXGQXic8R3aCgELnr0IWnr7/kAAAACoIkUkX95BuNAo1Regycj9PRHrOApTHNbG3pieJIV77c1VvJLjmUVbX+dDvEWjDv3iaRL5O8bc4dqDKh7LXuMO</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.OLE DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{494D3611-390B-4B37-BD8D-1FD1406876B7}"
+      DTS:ObjectName="ContratosDWH.OLE DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{494D3611-390B-4B37-BD8D-1FD1406876B7}localhost.ContratosDWH.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZx6ZHEoyzrq/VVrYL7NhXJ9Bbgdnh1YkCfI9A9alzywAAAAAOgAAAAAIAACAAAAAN4DF9yoyW/VJ+8QThTmoxp7g5Sv8V+UqvDB3oBUQ3XyAAAADARljYtIUstJxvCCiMFlwrOtm3Za3F8kx7XFZejeczDEAAAACmkBAuwfNeNXPMDCySg3KNm2smfGimmBhUdUKWnTPtrwq2j/yfCnQLc6r9UqcFcHfHhKogYTDJKmGpMRXA41QG</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DIM RECURSO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{844BDD13-ED2D-44FB-BDBC-3730155D6FAC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DIM RECURSO">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DIM RECURSO\DIM RECURSO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM RECURSO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Dim_Recurso"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM RECURSO\DIM RECURSO.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[id_recurso]"
+                      cachedDataType="i4"
+                      cachedName="id_recurso"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_recurso]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_recurso]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[id_contrato]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="id_contrato"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_contrato]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_contrato]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[pgn]"
+                      cachedDataType="i8"
+                      cachedName="pgn"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[pgn]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[pgn]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[sis_general_participaciones]"
+                      cachedDataType="i8"
+                      cachedName="sis_general_participaciones"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sis_general_participaciones]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_participaciones]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[sis_general_regalias]"
+                      cachedDataType="i8"
+                      cachedName="sis_general_regalias"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sis_general_regalias]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_regalias]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[recursos_propios_AGRI]"
+                      cachedDataType="i8"
+                      cachedName="recursos_propios_AGRI"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_propios_AGRI]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios_AGRI]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[recursos_credito]"
+                      cachedDataType="i8"
+                      cachedName="recursos_credito"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_credito]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_credito]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[recursos_propios]"
+                      cachedDataType="i8"
+                      cachedName="recursos_propios"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_propios]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[origen]"
+                      cachedDataType="wstr"
+                      cachedLength="16"
+                      cachedName="origen"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[origen]"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[origen]" />
+                    <inputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].Columns[destino_gasto]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="destino_gasto"
+                      externalMetadataColumnId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[destino_gasto]"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[destino_gasto]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_recurso]"
+                      dataType="i4"
+                      name="id_recurso" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_contrato]"
+                      dataType="wstr"
+                      length="18"
+                      name="id_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[origen]"
+                      dataType="wstr"
+                      length="16"
+                      name="origen" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[destino_gasto]"
+                      dataType="wstr"
+                      length="14"
+                      name="destino_gasto" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[pgn]"
+                      dataType="i8"
+                      name="pgn" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sis_general_participaciones]"
+                      dataType="i8"
+                      name="sis_general_participaciones" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sis_general_regalias]"
+                      dataType="i8"
+                      name="sis_general_regalias" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_propios_AGRI]"
+                      dataType="i8"
+                      name="recursos_propios_AGRI" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_credito]"
+                      dataType="i8"
+                      name="recursos_credito" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET].ExternalColumns[recursos_propios]"
+                      dataType="i8"
+                      name="recursos_propios" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM RECURSO\DIM RECURSO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\DIM RECURSO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\DIM RECURSO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\DIM RECURSO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM RECURSO\LOOK TRAZA"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="LOOK TRAZA"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Traza_Recurso]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Traza_Recurso]) [refTable]
+where [refTable].[id_traza] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_traza" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="origen" dataType="DT_WSTR" length="16" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="destino_gasto" dataType="DT_WSTR" length="14" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_traza]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM RECURSO\LOOK TRAZA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.OLE DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.OLE DB]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda].Columns[id_traza]"
+                      cachedDataType="i4"
+                      cachedName="id_traza"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_traza]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">id_traza</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[origen]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copiar columna"
+                      length="16"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[origen]"
+                      name="origen"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">origen</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[destino_gasto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copiar columna"
+                      length="14"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[destino_gasto]"
+                      name="destino_gasto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">destino_gasto</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM RECURSO\RECURSO DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="RECURSO DWH"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CE.id_recurso, CE.id_contrato, CE.id_traza, CE.pgn, CE.sis_general_participaciones, CE.sis_general_regalias, CE.recursos_propios_AGRI, CE.recursos_credito, CE.recursos_propios
+FROM Recurso_Financiero AS CE
+LEFT JOIN [ContratosDIm].[dbo].[Dim_Recurso] AS DW ON CE.id_recurso = DW.id_recurso 
+WHERE  DW.id_recurso IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM RECURSO\RECURSO DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_recurso]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_recurso]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_recurso]"
+                      name="id_recurso"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_contrato]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_contrato]"
+                      length="18"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_contrato]"
+                      name="id_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_traza]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_traza]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[id_traza]"
+                      name="id_traza"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[pgn]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[pgn]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[pgn]"
+                      name="pgn"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_participaciones]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[sis_general_participaciones]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_participaciones]"
+                      name="sis_general_participaciones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_regalias]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[sis_general_regalias]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[sis_general_regalias]"
+                      name="sis_general_regalias"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios_AGRI]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_propios_AGRI]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios_AGRI]"
+                      name="recursos_propios_AGRI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_credito]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_credito]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_credito]"
+                      name="recursos_credito"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_propios]"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].Columns[recursos_propios]"
+                      name="recursos_propios"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_recurso]"
+                      dataType="i4"
+                      name="id_recurso" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_contrato]"
+                      dataType="wstr"
+                      length="18"
+                      name="id_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_traza]"
+                      dataType="i4"
+                      name="id_traza" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[pgn]"
+                      dataType="i8"
+                      name="pgn" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[sis_general_participaciones]"
+                      dataType="i8"
+                      name="sis_general_participaciones" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[sis_general_regalias]"
+                      dataType="i8"
+                      name="sis_general_regalias" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_propios_AGRI]"
+                      dataType="i8"
+                      name="recursos_propios_AGRI" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_credito]"
+                      dataType="i8"
+                      name="recursos_credito" />
+                    <externalMetadataColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[recursos_propios]"
+                      dataType="i8"
+                      name="recursos_propios" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_recurso]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_recurso]"
+                      name="id_recurso" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_contrato]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_contrato]"
+                      name="id_contrato" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_traza]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_traza]"
+                      name="id_traza" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[pgn]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[pgn]"
+                      name="pgn" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[sis_general_participaciones]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[sis_general_participaciones]"
+                      name="sis_general_participaciones" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[sis_general_regalias]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[sis_general_regalias]"
+                      name="sis_general_regalias" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_propios_AGRI]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_propios_AGRI]"
+                      name="recursos_propios_AGRI" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_credito]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_credito]"
+                      name="recursos_credito" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_propios]"
+                      dataType="i8"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[recursos_propios]"
+                      name="recursos_propios" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DIM RECURSO.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\DIM RECURSO\DIM RECURSO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\DIM RECURSO\LOOK TRAZA.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\DIM RECURSO.Paths[Salida de origen de ADO NET]"
+              endId="Package\DIM RECURSO\LOOK TRAZA.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de ADO NET"
+              startId="Package\DIM RECURSO\RECURSO DWH.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\DIM RECURSO"
+          TopLeft="181.5,107.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DIM RECURSO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DIM RECURSO\RECURSO DWH"
+          TopLeft="165,62" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DIM RECURSO\LOOK TRAZA"
+          TopLeft="280,166" />
+        <EdgeLayout
+          Id="Package\DIM RECURSO.Paths[Salida de origen de ADO NET]"
+          TopLeft="246.5,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,62"
+              Start="0,0"
+              End="108,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="104,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104,31"
+                    Point2="108,31"
+                    Point3="108,35" />
+                  <mssgle:LineSegment
+                    End="108,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\DIM RECURSO\DIM RECURSO"
+          TopLeft="399,276" />
+        <EdgeLayout
+          Id="Package\DIM RECURSO.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="354.5,208">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,68"
+              Start="0,0"
+              End="123,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="119,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119,34"
+                    Point2="123,34"
+                    Point3="123,38" />
+                  <mssgle:LineSegment
+                    End="123,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-38.3190234375,39,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM RECURSO\RECURSO DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM RECURSO\LOOK TRAZA">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Traza_Recurso]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM RECURSO\DIM RECURSO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

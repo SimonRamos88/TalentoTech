@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL DWH</Name>
-    <LastWriteTime>2024-07-24T23:54:16.4167255Z</LastWriteTime>
+    <LastWriteTime>2024-07-25T04:13:04.0519316Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -38,12 +38,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Proveedor.dtsx</Name>
-      <LastWriteTime>2024-07-25T00:28:14.2198255Z</LastWriteTime>
+      <LastWriteTime>2024-07-25T03:53:02.2762813Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>main.dtsx</Name>
-      <LastWriteTime>2024-07-24T23:54:16.3764725Z</LastWriteTime>
+      <LastWriteTime>2024-07-25T03:52:30.590325Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Entidad.dtsx</Name>
+      <LastWriteTime>2024-07-25T03:59:17.2692131Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ModalidadContrato.dtsx</Name>
+      <LastWriteTime>2024-07-25T04:23:35.7495911Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

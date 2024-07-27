@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{EF46B8A3-7F46-4115-BF03-467F6F474E17}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{1D74B781-8DE4-48B2-A03A-45971A969A1C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADgRyhf8NiNH8F3SHpUPHj+rNxjp59alvZAryeN9Z91SQAAAAAOgAAAAAIAACAAAACx4fYUyCXji+ADpZ8MxVWze/a6IknApEM+mNCRq/s0lSAAAACNyDaCQAI+xglk8K6QuKDPxYKfxgOdmhKWtm4P0F/LcEAAAABqGgu6xRFLjjgL/ghE//GJSVY3du2rD07eYssJormZdVcrlASjvbihS+MK+KVrDBM11imKEoBRPWtk9gpOaJ2h</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9oPgnsX49QSF+5l/4UFPsR1hMB0jiDe9aULRWyjbrngAAAAAOgAAAAAIAACAAAAB7VoBOuA5wa3G8ilHU7SqYE1oeBZZogPB0SN8N87Eo3SAAAABc6I3zvBlB7k4Qw0fUUyjRbcWyyrVsP2kVeHe067gEFUAAAADLto5XJjofK7thFjYUyZZM6Z45/BBggyVZGQDTeHLiYDOn4ngpHGNW86PudFNU5M3xEsIY3ufMaMoOaonROpSh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZyhXfpA8CBUVBk/AAA0kRIahQDcVItO6N8HT+gURMrgAAAAAOgAAAAAIAACAAAABIGTSLeiPO/5oWgsJTe8f94RsaU5FCZxcvYWVX8T7OTyAAAABo7OTdKJZmffXHFnDOp2PZAuolNXqLxR1jfhi5cvaY70AAAACHzTLkoaC4mQD6O4NE0EfmzD1Y8gF8lAcehmRmluUOOKIRl7SjMN12HDgUSvCpYTVjKlt2WFYov+s3pfaquheT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABp0PyiySEztXTaqwtvt5MZsWDEfpQnUuzehPLVgWaXJQAAAAAOgAAAAAIAACAAAAAmdA58Kx4iEL9QUyysxrPuyonXiZKkuZAZ1ha2cQdJciAAAADshFt6+c/PtD28NtkI2P71ZdSPeVrP9dVbA7e/gaHhtkAAAADdmcaNEmldvA1hxYRuCtC0tGNPU77Wr/ZICMnWEoU/cTfOWMzw4diYGAezWR6xoVwigQE7lChiyXSII9KDrA6m</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmHzlnoEfoaEOqvpL5BXHE4l/OyQWEEwE7ZMSZOf7wpwAAAAAOgAAAAAIAACAAAACPH+YVmM8Cx+OS9JoO51hrwNLbbQwfNRJUtnG8cu9/iiAAAABE9hZ+uu9Jgi2kOLM2XTu8MiK3SVC8wq/C9EHdLjvQvUAAAACmEtrNfOeTiwR0CPUK7hhLbkm07T8n34KsAVJAMlv5UsNfhDWbZ/7q+N+bJVgX3OSJKx/jesC+BYCmLIkALl/N</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACek71NyFf2LUFq5THUk2uVxGCpoQ4ncraD2sZasJxJ8QAAAAAOgAAAAAIAACAAAACTEols80Nxwla6NpNMgGeIE5jPvyaSe5YqsLuS+8xKEiAAAAC0do1BU6bXKOMx3Xilm6Lp8ZV6PEhUNzoNbk1lXWw7mkAAAAB9tqBzcYWcTZa45FC57CkgWN8OU65qaJy0RScEOP4JKkI+Et1s0/lNUmlswAJo6pH+B7YPSdavYyn8ICo0XtXw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -76,7 +76,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD29kV9PVPyJU1PL/PYK0HPJ9KalqA4fKCvMNLYdf/PhAAAAAAOgAAAAAIAACAAAABrG2H2lDQXQVUNrLagsB3/jaX5DIYOrmUe3IG8noS5nSAAAADykuBkfZwO7z3kg4MLyBKNlqAEnUYaLGIKvf+RQwbTgEAAAAC5mqh8pja1HfqhiHMrkdEegF5PpVXQZPJ+uoXI2/RRdVMgP1cvXkxhJ5t1KL+3YC8KNYT1Gf0Cb+Knl+W27ycK</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACM7qKD3ezRTlpwGg4cjQETd7fatU6snynxpQXDlblZFQAAAAAOgAAAAAIAACAAAAAHdCyaAbCgYNnN4gWF1GCyY9mjrftIvP+2hECZQhSfByAAAADLQl/iPLJcmu/YCWsFPuTIkS4zl/KO33RUflhGK6iM6UAAAAB7+IHbdNzs0RQtxOGu30ZeaVvwBOO/cstZoIFp8wt+NwUOoyVztfSPp9aNyR5OftgTfCWoCPCFtuRCwdPZDeYd</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2814,23 +2814,8 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\PROVEEDOR CESECOP-S1\LOOK ID REP">
+    design-time-name="Package\PROVEEDOR CESECOP-S1\CESECOP-S1">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Representante]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -2845,8 +2830,23 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\PROVEEDOR CESECOP-S1\CESECOP-S1">
+    design-time-name="Package\PROVEEDOR CESECOP-S1\LOOK ID REP">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Representante]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -3027,12 +3027,20 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\PROVEEDOR CESECOP-S2\PROVEEDOR DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\PROVEEDOR CESECOP-S2\LOOK ID REP">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3042,16 +3050,8 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\PROVEEDOR CESECOP-S2\PROVEEDOR DWH">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -3224,12 +3224,10 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\PROVEEDOR CESECOP-S3\LOOK ID REP">
+    design-time-name="Package\PROVEEDOR CESECOP-S3\CESECOP-S3">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3242,10 +3240,12 @@ where [refTable].[tipo_doc_rep] = ? and [refTable].[nombre_rep_legal] = ? and [r
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\PROVEEDOR CESECOP-S3\CESECOP-S3">
+    design-time-name="Package\PROVEEDOR CESECOP-S3\LOOK ID REP">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

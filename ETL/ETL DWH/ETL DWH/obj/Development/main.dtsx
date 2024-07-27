@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{C8DCA065-E10F-48E7-8A90-EDF54B5AFE0A}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C06C4294-22D8-41A0-A992-CB974559F5CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -175,13 +175,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="197,42"
+          Id="Package\RUN DEPARTAMENTO"
+          TopLeft="334,117" />
+        <NodeLayout
           Size="164,42"
           Id="Package\RUN MUNICIPIO"
           TopLeft="413,206" />
         <NodeLayout
-          Size="197,42"
-          Id="Package\RUN DEPARTAMENTO"
-          TopLeft="334,117" />
+          Size="194,42"
+          Id="Package\RUN PROVEEDOR"
+          TopLeft="612,541" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\RUN RECURSO"
+          TopLeft="644,373" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\RUN REPRESENTANTE"
+          TopLeft="749,450" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\RUN TRAZA"
+          TopLeft="522,299" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="432.5,159">
@@ -216,10 +232,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\RUN TRAZA"
-          TopLeft="522,299" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="495,248">
@@ -254,10 +266,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\RUN RECURSO"
-          TopLeft="644,373" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="593,341">
@@ -292,14 +300,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="202,42"
-          Id="Package\RUN REPRESENTANTE"
-          TopLeft="749,450" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\RUN PROVEEDOR"
-          TopLeft="612,541" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="724.5,415">

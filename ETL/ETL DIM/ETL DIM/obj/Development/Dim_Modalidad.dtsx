@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/26/2024 9:15:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{D20B5413-B6FB-4311-83DC-02C0A6425E9C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{ACFF74F7-33DD-464C-B671-7316D3762C2C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}"
+      DTS:ObjectName="ContratosDIm.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDIm;Persist Security Info=True;Application Name=SSIS-Package-{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}localhost.ContratosDIm.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAi3ryyjh9chNaudNV9udK8zVNdbOpmHShKL48jSdIB+gAAAAAOgAAAAAIAACAAAACldcGrGG37NcY6f8CMVChsZHhKjrbkYCtmUjghKIhPeSAAAADNnXIjcUgjUOK4OC8yqP3zPVbeDum6itWERhgGCGGT4EAAAAAXk9oU9jAQHFxJd99scxLvWlnBP4gJi+jXEFxpoTSRdVrXlSZNP/C3NseIDjBOpMFoCI3pGv/r2i7hDsXLSp/i</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{48EF0FA8-A830-4210-B8B6-40A3691BBB39}"
+      DTS:ObjectName="ContratosDWH.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package-{48EF0FA8-A830-4210-B8B6-40A3691BBB39}localhost.ContratosDWH.sa 1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmJpITou5EOPFo2tsVGLI8oMMJIbAUE2xg1UYOut6J8AAAAAAOgAAAAAIAACAAAAC08VsMLIiJf84LXE0A9n9uY6mx5SVtfC+a28ytStESUSAAAAAYO3IqkFDikFoacWcWdMviqjXhUHRxpCZzYU/FpR+KZkAAAAB9RXge/fPBRuWiiOoPKw+ouHpKNczKvfc08YBGxkJRZeMz+5H2CNsjUIbWK6ax5U2zPFAr/ecOs2mA76A/w8Q2</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DIM MODALIDAD"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{D0800430-7879-4CDC-8961-AFCAF835594B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DIM MODALIDAD">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DIM MODALIDAD\MODALIDAD DIM"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="MODALIDAD DIM"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Dim_Modalidad"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM MODALIDAD\MODALIDAD DIM.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].Columns[id_modalidad_contrato]"
+                      cachedDataType="i4"
+                      cachedName="id_modalidad_contrato"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[id_modalidad_contrato]" />
+                    <inputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].Columns[modalidad_contratacion]"
+                      cachedDataType="wstr"
+                      cachedLength="59"
+                      cachedName="modalidad_contratacion"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[modalidad_contratacion]" />
+                    <inputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].Columns[just_modalidad_contratacion]"
+                      cachedDataType="wstr"
+                      cachedLength="90"
+                      cachedName="just_modalidad_contratacion"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[just_modalidad_contratacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      dataType="i4"
+                      name="id_modalidad_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      name="modalidad_contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      name="just_modalidad_contratacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DIM MODALIDAD\MODALIDAD DIM.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DIM.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DIM.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DIM.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DIM MODALIDAD\MODALIDAD DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="MODALIDAD DWH"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CE.id_modalidad_contrato, CE.modalidad_contratacion, CE.just_modalidad_contratacion
+FROM Modalidad_Contrato AS CE
+LEFT JOIN [ContratosDIm].[dbo].[Dim_Modalidad] AS Dim ON CE.id_modalidad_contrato = Dim.id_modalidad_contrato
+WHERE  Dim.id_modalidad_contrato IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DIM MODALIDAD\MODALIDAD DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[id_modalidad_contrato]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[id_modalidad_contrato]"
+                      name="id_modalidad_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[modalidad_contratacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      length="59"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[modalidad_contratacion]"
+                      name="modalidad_contratacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      length="90"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].Columns[just_modalidad_contratacion]"
+                      name="just_modalidad_contratacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_modalidad_contrato]"
+                      dataType="i4"
+                      name="id_modalidad_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      name="modalidad_contratacion" />
+                    <externalMetadataColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      name="just_modalidad_contratacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_modalidad_contrato]"
+                      dataType="i4"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_modalidad_contrato]"
+                      name="id_modalidad_contrato" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[modalidad_contratacion]"
+                      dataType="wstr"
+                      length="59"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[modalidad_contratacion]"
+                      name="modalidad_contratacion" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[just_modalidad_contratacion]"
+                      dataType="wstr"
+                      length="90"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[just_modalidad_contratacion]"
+                      name="just_modalidad_contratacion" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DIM MODALIDAD.Paths[Salida de origen de ADO NET]"
+              endId="Package\DIM MODALIDAD\MODALIDAD DIM.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\DIM MODALIDAD\MODALIDAD DWH.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\DIM MODALIDAD"
+          TopLeft="120.5,67.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DIM MODALIDAD">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\DIM MODALIDAD\MODALIDAD DWH"
+          TopLeft="299.5,98.5" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\DIM MODALIDAD\MODALIDAD DIM"
+          TopLeft="404,248" />
+        <EdgeLayout
+          Id="Package\DIM MODALIDAD.Paths[Salida de origen de ADO NET]"
+          TopLeft="386.5,140.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101,107.5"
+              Start="0,0"
+              End="101,100">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.75"
+                    Point2="0,53.75"
+                    Point3="4,53.75" />
+                  <mssgle:LineSegment
+                    End="97,53.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97,53.75"
+                    Point2="101,53.75"
+                    Point3="101,57.75" />
+                  <mssgle:LineSegment
+                    End="101,100" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM MODALIDAD\MODALIDAD DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM MODALIDAD\MODALIDAD DIM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
