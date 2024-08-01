@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{9BD5980F-B698-457B-936C-E6F2EEEDAA36}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{602EDDCC-1E71-43D5-B5DA-FE880C5A8F61}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC+FIWVMlfIOh9lQ82DMICD7mnIUxTLbu7oaYvMD2EZmAAAAAAOgAAAAAIAACAAAAA+ZKl6BITya1FcgFefHZgMgaKfW4IZ57aCY9yPifkmriAAAABTpL0WEIYbBqf5WGN44CHx6YPk/vI2oJdsDnK37bgD/EAAAAC8FG8kidgk0bIk9Jxx7H680nc2DUa/ibDP6AtejlsjVmp4HtKAdf42fUH9k7x8CT+OesHLcRKrfjJut5deivme</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAhMUUj7UsgZE3yoRYAHS3IOFAFLTor44SP5AOnfVB/twAAAAAOgAAAAAIAACAAAADDmjfjz3mcHHWP8bFabWQMAlNqTjpp29tlchGQoGmyFyAAAADFhLTDMKCWhn/ygTvnrr+AmzeSmPLAI8C6kjERbw1pnkAAAAAMSRLZZWZ6/Yf4qlylEQ0cjcMl7+n49jRZDLX6/W5hF9iZTFNugfpfq8SoRnVUk7quAXWKiNAvHN5Y8wa7gYp+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACUtGLEaQ8zm1ny36Jwhq2v4EFjODxF49Lw5+kwyJRDCAAAAAAOgAAAAAIAACAAAAAEYjEBqsK8QKxP5O2pw9rhaLZohBHNPz8xj771UXT58yAAAABm1KcgjOtjwzl7WoGyPL/3pdEL2Wu0thiHvl74M+H9pEAAAAAAGfsAbn/AOR0dgu0Ltbu1tLC44n4eYf7D4GbczAtUADqf8LSs6Jpv4FRmF1pBb7LNBPq4YbiPK7CzAlaoDBKU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAUzC8V+5NS8Hf+OZl79t3MHP7ChWN2W969O0Rkx4wp9wAAAAAOgAAAAAIAACAAAAA+1NpG1JL5VidBqqJxKO2WEwZsG0K3TfvUlCvEskn6byAAAAAN1oKkpksRieOSQYgvBpS24jaw0DoANHjB+2HSTfOm8kAAAACNmyOsUUBKjmR0+zl1k/BzcU9/xRCbKqF1olDl4iCHUZgONhogSjhwwCz5G9S+YRFOkQKMbtGRLxKULkJ0ryik</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA1e+/BtPylk2SJQDqez47lpFpx2KMwpYnBxE7c+cR/aAAAAAAOgAAAAAIAACAAAAAqox/qhDVw8gvkZI6BbdGpDocJFf4jn7mFH/fbDsPcCyAAAADqDmjVoaDbBaKVT2vaq/IQSRnLA1jym6If051yF3zTCEAAAAC+bXjpPd60Fke53uFmTF8J4/yJw+apjxuWyTV+Nv77tnx3sPYVKUb+vB9duBucplFEjNaB5llqaGz0EcSUCKrC</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAfbAh23HONfwd4SMnOLVgvhJhEqX4oJ58cpgIEY8dzQAAAAAOgAAAAAIAACAAAACcgGLIx8OR5UrDoV2rBDS44ay+hNOPiqHYQwt2PRvFKyAAAAAEPLZPLtcDsaq/3sSjPEaIAgjpcLDNmtlYaOl4xySdmkAAAABqGkeiOJrhgQLzztLjj322uRX0mmJ1aDCuFYAjEcnvQQCVfw/X/33TdUtGaVHWUXme/9oY/ckcQ0UWAGyZE69R</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -76,7 +76,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC4sS/YEfIggQjd016Jo6zIGeUNhsje8nMk/b5cSWLaYQAAAAAOgAAAAAIAACAAAACDwZTqAbLGBN4+XK7mn9N/FoMDJEj+xn3ah51Hb/cmSCAAAADFwgREAvWzf+/JjM8jmuYgu8t3MH9iPQmdjYkhoe/tokAAAACrleL4MoXOwh7WHFhGHn2adlMQmyQaNAw1LlhU5qICaxetxgTNvn/Vza9gMelOgXuNYBq4qUbJFe4L+XJ/iGg5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADk/lWYlY4bJHQzLls770jev6h38nuKAPmGEtxfxHb4eAAAAAAOgAAAAAIAACAAAAD6TQ7WE9nu9E8lwI1hFmkyZTpPTBn3DYFBjeODYFmQTCAAAAAtotQZO/XxVqHu4cOXqNjCMy280UcnzTQVrRn9c/3xAkAAAADBqHyuRKyTGkiHYASmKnJkiIHfCm9sJgTXPVxBPhZ7on/ja7kB6PVGCgU3JKPyDeUUg2Y6oOqEB03C8DQkI8Vj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -94,6 +94,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
+          autoAdjustBufferSize="true"
           version="1">
           <components>
             <component
@@ -127,7 +128,7 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
                   dataType="System.Int32"
                   description="Especifica el tipo de caché de la tabla de búsqueda."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
@@ -644,7 +645,7 @@ ON Rec.id_traza = traz.id_traza</property>
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
                   expressionType="Notify"
-                  name="CommandTimeout">30</property>
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
@@ -817,6 +818,7 @@ ON Rec.id_traza = traz.id_traza</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
+          autoAdjustBufferSize="true"
           version="1">
           <components>
             <component
@@ -826,6 +828,7 @@ ON Rec.id_traza = traz.id_traza</property>
               description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
               name="BUSCA ID TRAZA"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="6">
               <properties>
                 <property
@@ -850,7 +853,7 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
                   dataType="System.Int32"
                   description="Especifica el tipo de caché de la tabla de búsqueda."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
@@ -1001,7 +1004,8 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
               contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Conversión de datos"
               name="CAST TRAZA"
-              usesDispositions="true">
+              usesDispositions="true"
+              validateExternalMetadata="False">
               <inputs>
                 <input
                   refId="Package\RECURSO CESECOP-S2\CAST TRAZA.Inputs[Entrada de conversión de datos]"
@@ -1104,6 +1108,7 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
               description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
               name="CESECOP-S2"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="4">
               <properties>
                 <property
@@ -1350,6 +1355,7 @@ ON Rec.id_traza = traz.id_traza</property>
               description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
               name="RECURSO DWH"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="2">
               <properties>
                 <property
@@ -1367,7 +1373,7 @@ ON Rec.id_traza = traz.id_traza</property>
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
                   expressionType="Notify"
-                  name="CommandTimeout">30</property>
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
@@ -1540,6 +1546,7 @@ ON Rec.id_traza = traz.id_traza</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
+          autoAdjustBufferSize="true"
           version="1">
           <components>
             <component
@@ -1549,6 +1556,7 @@ ON Rec.id_traza = traz.id_traza</property>
               description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
               name="BUSCA ID TRAZA"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="6">
               <properties>
                 <property
@@ -1573,7 +1581,7 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
                   dataType="System.Int32"
                   description="Especifica el tipo de caché de la tabla de búsqueda."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
@@ -1724,7 +1732,8 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
               contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Conversión de datos"
               name="CAST TRAZA"
-              usesDispositions="true">
+              usesDispositions="true"
+              validateExternalMetadata="False">
               <inputs>
                 <input
                   refId="Package\RECURSO CESECOP-S3\CAST TRAZA.Inputs[Entrada de conversión de datos]"
@@ -1827,6 +1836,7 @@ where [refTable].[destino_gasto] = ? and [refTable].[origen] = ?</property>
               description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
               name="CESECOP-S3"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="4">
               <properties>
                 <property
@@ -2073,6 +2083,7 @@ ON Rec.id_traza = traz.id_traza</property>
               description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
               name="RECURSO DWH"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="2">
               <properties>
                 <property
@@ -2090,7 +2101,7 @@ ON Rec.id_traza = traz.id_traza</property>
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
                   expressionType="Notify"
-                  name="CommandTimeout">30</property>
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
@@ -2516,7 +2527,7 @@ ON Rec.id_traza = traz.id_traza</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
