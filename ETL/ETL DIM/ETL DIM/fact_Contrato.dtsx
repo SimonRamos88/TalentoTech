@@ -1,0 +1,744 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/31/2024 9:01:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAMASSEQUITAS"
+  DTS:CreatorName="ramassequitas\ramass"
+  DTS:DTSID="{F0AD3305-65D0-4D48-B25D-C0037E1A2513}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Fact_Contrato"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{41E62964-8376-4F02-948C-272BC584268F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDIm.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}"
+      DTS:ObjectName="ContratosDIm.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDIm;Persist Security Info=True;Application Name=SSIS-Package-{D82D8A5F-E0D8-4239-B1DE-4C39DAD18119}localhost.ContratosDIm.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABJcB+kjGTo+XcJZyMEHUFJcklDijDXY6Q2LIquTRzZAAAAAAOgAAAAAIAACAAAAA6Gnn2atw762RIYzxx4mSBUdA5OBUi6o8wWOmn/tm8USAAAAA4vdsnVjTLHTuucMRhqNV5OMV517NJSCXwTOCIbr0Xs0AAAABPH9etptnJvU9MNTlYbkRoJ11VM70YX7FEpUcxCREJkPZHkFAqTPT4lpJU6JQEyGjCLyYvDPkqS2qkNhDcHKbK</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{48EF0FA8-A830-4210-B8B6-40A3691BBB39}"
+      DTS:ObjectName="ContratosDWH.ADO NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ContratosDWH;Persist Security Info=True;Application Name=SSIS-Package-{48EF0FA8-A830-4210-B8B6-40A3691BBB39}localhost.ContratosDWH.sa 1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6eUIT6YKF0WA3ivoMohPBgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyMvdf4JqTtb/pmVo7MfvvDqOW3qYjkJCbyWE+bnSEJQAAAAAOgAAAAAIAACAAAABEuusi6WHFa8V0rJxFbXapblUCUoi2HvEMx2W0CaZG1CAAAABdJHP5NsQZxlQF4R9qEb6brXTkPysFLaiGahgvh1jVNEAAAAAv+rQ3Tnecoxt4RCBfvRAPNrXNHP8VKlvO5GhxQjsMrsVC0ZX20+/UuT0uKhBGl1YPelVfNlDrPwowyygTeTSy</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FACT CONTRATO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{D49053ED-3495-4F53-ABA5-B95617FE6C6A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FACT CONTRATO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FACT CONTRATO\CONTRATOS DWH"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="CONTRATOS DWH"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Contrato"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FACT CONTRATO\CONTRATOS DWH.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  connectionManagerRefId="Package.ConnectionManagers[ContratosDWH.ADO NET]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_contrato]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_contrato]"
+                      length="18"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_contrato]"
+                      name="id_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_modalidad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_modalidad]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_modalidad]"
+                      name="id_modalidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_proveedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_proveedor]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_proveedor]"
+                      name="id_proveedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_entidad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_entidad]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[id_entidad]"
+                      name="id_entidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[estado_contrato]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[estado_contrato]"
+                      length="17"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[estado_contrato]"
+                      name="estado_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[cod_categoria_principal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[cod_categoria_principal]"
+                      length="11"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[cod_categoria_principal]"
+                      name="cod_categoria_principal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[proceso_compra]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[proceso_compra]"
+                      length="16"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[proceso_compra]"
+                      name="proceso_compra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[tipo_contrato]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_contrato]"
+                      length="30"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[tipo_contrato]"
+                      name="tipo_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_firma]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_firma]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_firma]"
+                      name="fecha_firma"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_contrato]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_contrato]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_contrato]"
+                      name="fecha_ini_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_contrato]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_contrato]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_contrato]"
+                      name="fecha_fin_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_ejecucion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_ejecucion]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_ejecucion]"
+                      name="fecha_ini_ejecucion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_ejecucion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_ejecucion]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_ejecucion]"
+                      name="fecha_fin_ejecucion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_liq]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_liq]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_ini_liq]"
+                      name="fecha_ini_liq"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_liq]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_liq]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[fecha_fin_liq]"
+                      name="fecha_fin_liq"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[habilita_pago_adelantado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[habilita_pago_adelantado]"
+                      length="11"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[habilita_pago_adelantado]"
+                      name="habilita_pago_adelantado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es_liquidado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es_liquidado]"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es_liquidado]"
+                      name="es_liquidado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[obligacion_ambiental]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[obligacion_ambiental]"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[obligacion_ambiental]"
+                      name="obligacion_ambiental"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[obligacion_postconsumo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[obligacion_postconsumo]"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[obligacion_postconsumo]"
+                      name="obligacion_postconsumo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es_reversado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es_reversado]"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es_reversado]"
+                      name="es_reversado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es postconflicto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es postconflicto]"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[es postconflicto]"
+                      name="es postconflicto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_contrato]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_contrato]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_contrato]"
+                      name="valor_contrato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pago_adelantado]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pago_adelantado]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pago_adelantado]"
+                      name="valor_pago_adelantado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_facturado]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_facturado]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_facturado]"
+                      name="valor_facturado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_pago]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_pago]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_pago]"
+                      name="valor_pendiente_pago"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pagado]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pagado]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pagado]"
+                      name="valor_pagado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_amortizado]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_amortizado]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_amortizado]"
+                      name="valor_amortizado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_amortizado]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_amortizado]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_amortizado]"
+                      name="valor_pendiente_amortizado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_ejecucion]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_ejecucion]"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].Columns[valor_pendiente_ejecucion]"
+                      name="valor_pendiente_ejecucion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_contrato]"
+                      dataType="wstr"
+                      length="18"
+                      name="id_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_modalidad]"
+                      dataType="i4"
+                      name="id_modalidad" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_proveedor]"
+                      dataType="i4"
+                      name="id_proveedor" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[id_entidad]"
+                      dataType="i4"
+                      name="id_entidad" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[estado_contrato]"
+                      dataType="wstr"
+                      length="17"
+                      name="estado_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[cod_categoria_principal]"
+                      dataType="wstr"
+                      length="11"
+                      name="cod_categoria_principal" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[proceso_compra]"
+                      dataType="wstr"
+                      length="16"
+                      name="proceso_compra" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_contrato]"
+                      dataType="wstr"
+                      length="30"
+                      name="tipo_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_firma]"
+                      dataType="dbTimeStamp"
+                      name="fecha_firma" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_contrato]"
+                      dataType="dbTimeStamp"
+                      name="fecha_ini_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_contrato]"
+                      dataType="dbTimeStamp"
+                      name="fecha_fin_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_ejecucion]"
+                      dataType="dbTimeStamp"
+                      name="fecha_ini_ejecucion" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_ejecucion]"
+                      dataType="dbTimeStamp"
+                      name="fecha_fin_ejecucion" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_ini_liq]"
+                      dataType="dbTimeStamp"
+                      name="fecha_ini_liq" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_fin_liq]"
+                      dataType="dbTimeStamp"
+                      name="fecha_fin_liq" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[habilita_pago_adelantado]"
+                      dataType="wstr"
+                      length="11"
+                      name="habilita_pago_adelantado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es_liquidado]"
+                      dataType="wstr"
+                      length="2"
+                      name="es_liquidado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[obligacion_ambiental]"
+                      dataType="wstr"
+                      length="2"
+                      name="obligacion_ambiental" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[obligacion_postconsumo]"
+                      dataType="wstr"
+                      length="2"
+                      name="obligacion_postconsumo" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es_reversado]"
+                      dataType="wstr"
+                      length="2"
+                      name="es_reversado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[es postconflicto]"
+                      dataType="wstr"
+                      length="2"
+                      name="es postconflicto" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_contrato]"
+                      dataType="i8"
+                      name="valor_contrato" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pago_adelantado]"
+                      dataType="i8"
+                      name="valor_pago_adelantado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_facturado]"
+                      dataType="i8"
+                      name="valor_facturado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_pago]"
+                      dataType="i8"
+                      name="valor_pendiente_pago" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pagado]"
+                      dataType="i8"
+                      name="valor_pagado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_amortizado]"
+                      dataType="i8"
+                      name="valor_amortizado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_amortizado]"
+                      dataType="i8"
+                      name="valor_pendiente_amortizado" />
+                    <externalMetadataColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de origen de ADO NET].ExternalColumns[valor_pendiente_ejecucion]"
+                      dataType="i8"
+                      name="valor_pendiente_ejecucion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_contrato]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_contrato]"
+                      name="id_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_modalidad]"
+                      dataType="i4"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_modalidad]"
+                      name="id_modalidad" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_proveedor]"
+                      dataType="i4"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_proveedor]"
+                      name="id_proveedor" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_entidad]"
+                      dataType="i4"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[id_entidad]"
+                      name="id_entidad" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[estado_contrato]"
+                      dataType="wstr"
+                      length="17"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[estado_contrato]"
+                      name="estado_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[cod_categoria_principal]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[cod_categoria_principal]"
+                      name="cod_categoria_principal" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[proceso_compra]"
+                      dataType="wstr"
+                      length="16"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[proceso_compra]"
+                      name="proceso_compra" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[tipo_contrato]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[tipo_contrato]"
+                      name="tipo_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_firma]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_firma]"
+                      name="fecha_firma" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_contrato]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_contrato]"
+                      name="fecha_ini_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_contrato]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_contrato]"
+                      name="fecha_fin_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_ejecucion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_ejecucion]"
+                      name="fecha_ini_ejecucion" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_ejecucion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_ejecucion]"
+                      name="fecha_fin_ejecucion" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_liq]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_ini_liq]"
+                      name="fecha_ini_liq" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_liq]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[fecha_fin_liq]"
+                      name="fecha_fin_liq" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[habilita_pago_adelantado]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[habilita_pago_adelantado]"
+                      name="habilita_pago_adelantado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es_liquidado]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es_liquidado]"
+                      name="es_liquidado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[obligacion_ambiental]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[obligacion_ambiental]"
+                      name="obligacion_ambiental" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[obligacion_postconsumo]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[obligacion_postconsumo]"
+                      name="obligacion_postconsumo" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es_reversado]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es_reversado]"
+                      name="es_reversado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es postconflicto]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[es postconflicto]"
+                      name="es postconflicto" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_contrato]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_contrato]"
+                      name="valor_contrato" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pago_adelantado]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pago_adelantado]"
+                      name="valor_pago_adelantado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_facturado]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_facturado]"
+                      name="valor_facturado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_pago]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_pago]"
+                      name="valor_pendiente_pago" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pagado]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pagado]"
+                      name="valor_pagado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_amortizado]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_amortizado]"
+                      name="valor_amortizado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_amortizado]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_amortizado]"
+                      name="valor_pendiente_amortizado" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_ejecucion]"
+                      dataType="i8"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[valor_pendiente_ejecucion]"
+                      name="valor_pendiente_ejecucion" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FACT CONTRATO\CONTRATOS DWH.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\FACT CONTRATO"
+          TopLeft="283,122" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FACT CONTRATO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\FACT CONTRATO\CONTRATOS DWH"
+          TopLeft="383,120" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT CONTRATO\CONTRATOS DWH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

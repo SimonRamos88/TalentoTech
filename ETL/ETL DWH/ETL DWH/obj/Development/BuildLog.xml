@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL DWH</Name>
-    <LastWriteTime>2024-07-25T04:13:04.0519316Z</LastWriteTime>
+    <LastWriteTime>2024-07-27T23:00:13.8965063Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>RecursoFinanciero.dtsx</Name>
-      <LastWriteTime>2024-07-22T04:16:27.4666867Z</LastWriteTime>
+      <LastWriteTime>2024-08-01T01:16:18.9409446Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -54,6 +54,11 @@
     <ProjectBuildItemInfo>
       <Name>ModalidadContrato.dtsx</Name>
       <LastWriteTime>2024-07-25T04:23:35.7495911Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Contrato.dtsx</Name>
+      <LastWriteTime>2024-08-01T00:43:56.4705008Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
